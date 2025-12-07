@@ -1,3 +1,8 @@
+function add_to_cart()
+{
+	alert('wqwewqd');
+}
+
 function some()
 {
 	var x = window.localStorage.getItem('bbb');
