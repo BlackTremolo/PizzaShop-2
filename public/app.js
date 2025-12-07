@@ -1,6 +1,6 @@
-function add_to_cart()
+function add_to_cart(id)
 {
-	alert('wqwewqd');
+	alert('pizza id:'+ id);
 }
 
 function some()
