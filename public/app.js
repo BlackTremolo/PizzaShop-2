@@ -6,17 +6,8 @@ function add_to_cart(id)
 	x = x * 1 + 1;
 
 	window.localStorage.setItem(key, x);
-}
 
-function some()
-{
-	var x = window.localStorage.getItem('bbb');
-
-	x = x * 1 + 1;
-
-	window.localStorage.setItem('bbb', x);
-	
-	alert(x);
+	update_orders_input();
 }
 
 function cart_get_products()
@@ -49,6 +40,12 @@ function cart_get_orders()
 			}
 	}
 	return orders
+}
+
+function update_orders_input()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders); 
 }
 
 
