@@ -8,7 +8,7 @@ function add_to_cart(id)
 	window.localStorage.setItem(key, x);
 
 	update_orders_input();
-	update_orders_button()
+	update_orders_button();
 }
 
 function cart_get_products()
