@@ -21,9 +21,9 @@ get '/about' do
 end
 
 post '/cart' do
-	orders_input = params[:orders]  
+	@orders_input = params[:orders]  
   	
-  	orders1 = parse_orders_input orders_input
+  	orders1 = parse_orders_input @orders_input
   	
   	@orders = []
   	
