@@ -29,7 +29,7 @@ function cart_get_products()
 
 function cart_get_orders()
 {
-	var orders= '';
+	var orders = '';
 	for (var i = 0; i < window.localStorage.length; i++) 
 	{
 		var key = window.localStorage.key(i);
@@ -39,9 +39,11 @@ function cart_get_orders()
 			{
 				orders = orders + key + '=' + value + ',';
 			}
+		
 	}
 	return orders
 }
+
 
 function update_orders_input()
 {

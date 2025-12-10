@@ -9,6 +9,7 @@ class Product <ActiveRecord::Base
 
 end
 
+
 get '/' do
 	@products = Product.all
 	
@@ -26,4 +27,5 @@ end
 
 post '/cart' do
   
+  	erb :cart
 end
