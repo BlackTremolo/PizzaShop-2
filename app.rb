@@ -40,12 +40,13 @@ get '/place_order' do
 
 	erb :place_order
 end
+
 post '/place_order' do 
 
 	@o = Order.new params[:order]
 	@o.save
 
-	erb 'Order accepted'
+	erb :order_finish
 end
 
 
