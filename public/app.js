@@ -57,3 +57,10 @@ function update_orders_button()
 	$('#orders_button').val(number); 
 }
 
+function cancel_order()
+{
+	
+	alert('Cart cleared');
+	window.localStorage.clear();
+	
+}
