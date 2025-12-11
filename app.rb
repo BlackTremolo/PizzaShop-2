@@ -26,6 +26,10 @@ post '/cart' do
   	
   	orders1 = parse_orders_input @orders_input
   	
+  	if orders1.length == 0
+  		return erb 'Your cart is empty'
+  	end
+
   	@orders = []
   	
   	orders1.each do |x|
