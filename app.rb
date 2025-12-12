@@ -30,18 +30,25 @@ post '/cart' do
   		return erb 'Your cart is empty'
   	end
 
-  	@orders = []
+  	@order = []
   	
   	orders1.each do |x|
-  		@orders << [Product.find(x[0].to_i), x[1]] 
+  		@order << [Product.find(x[0].to_i), x[1]] 
   	end
 
+	@name_products = ''
+	@order.each do |x| 
+		@name_products += "#{x[0].title}, #{x[1].to_s}; "
+	end
+  	
   	erb :cart
 end
 
-get '/place_order' do
-	@all_orders = Order.all
+get '/admin' do
+	
 
+	@all_orders = Order.all
+	
 	erb :place_order
 end
 
@@ -52,7 +59,6 @@ post '/place_order' do
 
 	erb :order_finish
 end
-
 
 def parse_orders_input orders_input
 	s1 = orders_input.split(',')
