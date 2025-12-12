@@ -35,9 +35,9 @@ post '/cart' do
   	orders1.each do |x|
   		@order << [Product.find(x[0].to_i), x[1]] 
   	end
-
+  		
 	@name_products = ''
-	@order.each do |x| 
+	@order.each do |x| 				
 		@name_products += "#{x[0].title}, #{x[1].to_s}; "
 	end
   	
