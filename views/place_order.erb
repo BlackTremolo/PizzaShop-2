@@ -1,1 +1,13 @@
-<%= @all_orders%>
+<h2>Orders list</h2>
+<div class="col-md-12">
+	<% @all_orders.each do |o| %>
+		<div class="row">
+			<div><%= o.orders_input %></div>
+			<div><%= o.name %></div>
+			<div><%= o.phone %></div>
+			<div><%= o.address %> cm</div>
+			<div><%= o.created_at %> rub</div>
+		</div>
+		<hr>
+	<% end %>
+</div>
